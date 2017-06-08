@@ -5,7 +5,7 @@ import 'angular-ui-bootstrap';
 
 import { MainComponent } from './main.component';
 
-const ng1App: ng.IModule = angular.module('ng1App', ['ui.router', 'ui.bootstrap']);
+export const ng1App: ng.IModule = angular.module('ng1App', ['ui.router', 'ui.bootstrap']);
 
 ng1App.component('mainComponent', new MainComponent());
 

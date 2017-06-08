@@ -450,8 +450,8 @@ module.exports = {
       reasons: false,
       children: false,
       source: false,
-      errors: false,
-      errorDetails: false,
+      errors: true,
+      errorDetails: true,
       warnings: false,
       publicPath: false
     }
@@ -467,8 +467,8 @@ module.exports = {
     reasons: false,
     children: false,
     source: false,
-    errors: false,
-    errorDetails: false,
+    errors: true,
+    errorDetails: true,
     warnings: false,
     publicPath: false
   }

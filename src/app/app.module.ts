@@ -6,6 +6,7 @@ import { UpgradeModule } from '@angular/upgrade/static';
 import { AppRoutingModule } from './ng/app-routing.module';
 
 import { MainModule } from './ng/main.module';
+import './downgraded-items';
 
 import { AppComponent } from './app.component';
 
