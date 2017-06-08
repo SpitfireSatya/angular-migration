@@ -11,4 +11,5 @@ import { MainComponent } from './main.component';
   providers: [],
   exports: [MainComponent]
 })
+
 export class MainModule { }

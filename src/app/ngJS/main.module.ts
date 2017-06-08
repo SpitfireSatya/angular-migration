@@ -1,15 +1,18 @@
 
 import * as angular from 'angular';
 import 'angular-ui-router';
+import 'angular-ui-bootstrap';
 
 import { MainComponent } from './main.component';
 
-const app: ng.IModule = angular.module('main', ['ui-router', 'ui-bootstrap']);
+const ng1App: ng.IModule = angular.module('ng1App', ['ui.router', 'ui.bootstrap']);
 
-app.component('mainComponentAngular1', MainComponent);
+ng1App.component('mainComponent', new MainComponent());
 
-app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
-  ($locationProvider, $stateProvider, $urlRouterProvider) => {
+// TODO: Fix typings for ui-router
+ng1App.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
+  ($locationProvider: ng.ILocationProvider, $stateProvider: any,
+  $urlRouterProvider: any) => {
 
     $locationProvider.html5Mode({
         enabled: true,
@@ -19,7 +22,7 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     $stateProvider
       .state('ngJS', {
           url: '/angular1',
-          template: '<main-component-angular1><main-component-angular1>'
+          template: '<main-component><main-component>',
       });
 
     $urlRouterProvider.otherwise('/');
