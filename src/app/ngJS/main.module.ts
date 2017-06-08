@@ -20,11 +20,11 @@ ng1App.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
     });
 
     $stateProvider
-      .state('ngJS', {
-          url: '/angular1',
+      .state('main', {
+          url: '/ng1/main',
           template: '<main-component><main-component>',
       });
 
-    $urlRouterProvider.otherwise('/');
+    /*$urlRouterProvider.otherwise('/');*/
 
 }]);
